@@ -68,4 +68,125 @@ As this project is in its early development stages, feedback and suggestions are
 
 ---
 
+# MindLift
+
+MindLift is an anonymous, sentiment-aware chat application designed to promote healthy conversations and reduce online negativity. It combines a real-time backend with a modern, accessible frontend.
+
+---
+
+## Installation Guide
+
+If you want to run this project locally or deploy it yourself, follow these steps carefully.
+
+---
+
+## Prerequisites
+
+Make sure you have the following installed on your system:
+
+- **Node.js** (v18 or later recommended)
+- **npm** (comes with Node.js)
+- **Git**
+
+You can verify installation by running:
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+---
+
+## Clone the Repository
+
+Open a terminal and run:
+
+```bash
+git clone https://github.com/MinhajulKabirNishat/MindLift.git
+cd MindLift
+```
+
+---
+
+## Setup the Backend
+
+Navigate to the server directory:
+
+```bash
+cd server
+npm install
+node index.js
+```
+
+The backend server will start at:
+
+```
+https://mindlift-backend-nishat.onrender.com
+```
+
+Keep this terminal running.
+
+---
+
+## Setup the Frontend
+
+Open a **second terminal** and navigate to the client directory:
+
+```bash
+cd client
+npm install
+```
+
+### Important (Tailwind CSS v4)
+
+Because this project uses **Tailwind CSS v4**, you must install the PostCSS bridge manually:
+
+```bash
+npm install @tailwindcss/postcss
+```
+
+Now start the frontend development server:
+
+```bash
+npm run dev
+```
+
+The frontend will typically run on:
+
+```
+https://mindlift-k010.onrender.com/
+```
+
+---
+
+## Connecting Frontend & Backend
+
+Ensure the socket connection points to the correct backend URL.
+
+In the file:
+
+```
+client/src/App.jsx
+```
+
+Confirm the socket configuration:
+
+```js
+const socket = io.connect("https://mindlift-backend-nishat.onrender.com");
+```
+
+This allows real-time communication between the client and server.
+
+---
+
+## Author
+
+**Minhajul Kabir Nishat**
+GitHub: [https://github.com/MinhajulKabirNishat](https://github.com/MinhajulKabirNishat)
+
+---
+
+If you face any issues or want to contribute, feel free to open an issue or submit a pull request😊
+
 **Developed with ❤️ for Mental Wellness.**
